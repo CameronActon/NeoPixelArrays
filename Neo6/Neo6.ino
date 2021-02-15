@@ -12,8 +12,6 @@
 const int stripPin = 6;
 Adafruit_NeoPixel strip(64, stripPin);
 
-bool empty;
-
 void setup() {
   strip.begin();
   strip.clear();
@@ -23,12 +21,10 @@ void setup() {
 
 void loop() {
   for (int i = 0; i < strip.numPixels(); i++) {
-    if (empty) {
+    if (i % 2 > 0) {
       strip.setPixelColor(i, 255, 0, 255);
-      empty = !empty;
     } else {
       strip.setPixelColor(i, 0, 0, 0);
-      empty = !empty;
     }
   }
   strip.show();

@@ -26,9 +26,9 @@ void loop() {
     strip.setPixelColor(i, Wheel(color));
   }
   delay(20);
-
-  color = (color + 1) % 255;
   strip.show();
+  
+  color = (color + 1) % 255;
 }
 
 uint32_t Wheel(byte WheelPos) {

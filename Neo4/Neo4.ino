@@ -26,8 +26,8 @@ void loop() {
     strip.setPixelColor(i, 255, 0, 255);
   }
   strip.show();
-  
   delay(500);
+  
   strip.clear();
   strip.show();
   delay(500);

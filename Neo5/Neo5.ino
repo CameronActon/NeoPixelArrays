@@ -4,7 +4,7 @@
 */
 
 //Hello World Test for an 8x8 NeoPixel array
-//This test was designed to make the entire matrix of LEDs turn on sequentially, then turn off sequentially 
+//This test was designed to make the entire matrix of LEDs turn on sequentially, then turn off sequentially
 
 #include <Adafruit_NeoPixel.h>
 
@@ -25,13 +25,11 @@ void loop() {
   for (int i = 0; i < strip.numPixels(); i++) {
     if (empty) {
       strip.setPixelColor(i, 255, 0, 255);
-      delay(30);
-      strip.show();
     } else {
       strip.setPixelColor(i, 0, 0, 0);
-      delay(30);
-      strip.show();
     }
+    delay(30);
+    strip.show();
   }
   empty = !empty;
 }

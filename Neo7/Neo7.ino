@@ -18,23 +18,22 @@ void setup() {
   strip.begin();
   strip.clear();
 
-  strip.setBrightness(10);
+  strip.setBrightness(50);
 }
 
 void loop() {
   for (int i = 0; i < strip.numPixels(); i++) {
-      empty = !empty;
-
+    empty = !empty;
+    
     if (i % 8 == 0) {
       empty = !empty;
     }
-    
+
     if (empty) {
       strip.setPixelColor(i, 255, 0, 255);
     } else {
       strip.setPixelColor(i, 0, 0, 0);
     }
-  
   }
   strip.show();
 }
