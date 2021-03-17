@@ -41,5 +41,5 @@ void loop() {
   strip.show();
 
   frame = (frame + 1) % 6;
-  delay(500);
+  delay(300);
 }
